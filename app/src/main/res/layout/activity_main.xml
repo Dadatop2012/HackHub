@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://android.com"
+    android:id="@+id/layoutMainRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0C">
+
+    <!-- ================= SCHERMATA 1: CALCOLATRICE MIMETICA ================= -->
+    <LinearLayout
+        android:id="@+id/layoutCalculator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#121214"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            android:gravity="bottom|end"
+            android:padding="12dp"
+            android:background="#0A0A0C"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:id="@+id/txtCalcHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text=""
+                android:textColor="#5A5A5F"
+                android:textSize="18sp"
+                android:maxLines="1" />
+            <TextView
+                android:id="@+id/txtCalcDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="54sp"
+                android:maxLines="1"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="4"
+            android:rowCount="5">
+            <Button android:id="@+id/btnC" android:text="C" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#2C2C35" android:textColor="#FF3D00" android:textStyle="bold" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btnBackspace" android:text="⌫" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#2C2C35" android:textColor="#00E676" android:textStyle="bold" app:cornerRadius="16dp"/>
+            <TextView android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" />
+            <Button android:id="@+id/btnDiv" android:text="÷" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#F1A33C" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+
+            <Button android:id="@+id/btn7" android:text="7" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btn8" android:text="8" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btn9" android:text="9" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btnMul" android:text="×" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#F1A33C" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+
+            <Button android:id="@+id/btn4" android:text="4" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btn5" android:text="5" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btn6" android:text="6" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btnSub" android:text="-" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#F1A33C" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+
+            <Button android:id="@+id/btn1" android:text="1" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btn2" android:text="2" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btn3" android:text="3" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btnAdd" android:text="+" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#F1A33C" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+
+            <Button android:id="@+id/btn0" android:text="0" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnSpan="2" android:layout_columnWeight="2" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btnDot" android:text="." android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+            <Button android:id="@+id/btnEqual" android:text="=" android:layout_width="0dp" android:layout_height="68dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:backgroundTint="#F1A33C" android:textColor="#FFFFFF" android:textSize="22sp" app:cornerRadius="16dp"/>
+        </GridLayout>
+    </LinearLayout>
+
+    <!-- ================= BARRA INFERIORE DELLE SCHEDE (Rialzata sopra i tasti Android) ================= -->
+    <!-- ================= BARRA INFERIORE DELLE SCHEDE (Rialzata e distanziata dai tasti Android) ================= -->
+    <LinearLayout
+        android:id="@+id/layoutBottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:background="#0A0A0C"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:elevation="8dp"
+        android:visibility="gone">
+        <Button android:id="@+id/menuBtnRadar" android:layout_width="56dp" android:layout_height="56dp" android:layout_margin="4dp" android:text="RDR" android:textSize="9sp" android:backgroundTint="#1C1C24" android:textColor="#FFFFFF" android:textStyle="bold" android:padding="0dp" app:cornerRadius="28dp"/>
+        <Button android:id="@+id/menuBtnLan" android:layout_width="56dp" android:layout_height="56dp" android:layout_margin="4dp" android:text="LAN" android:textSize="9sp" android:backgroundTint="#111115" android:textColor="#888888" android:padding="0dp" app:cornerRadius="28dp"/>
+        <Button android:id="@+id/menuBtnPorts" android:layout_width="56dp" android:layout_height="56dp" android:layout_margin="4dp" android:text="PRT" android:textSize="9sp" android:backgroundTint="#111115" android:textColor="#888888" android:padding="0dp" app:cornerRadius="28dp"/>
+        <Button android:id="@+id/menuBtnDns" android:layout_width="56dp" android:layout_height="56dp" android:layout_margin="4dp" android:text="DNS" android:textSize="9sp" android:backgroundTint="#111115" android:textColor="#888888" android:padding="0dp" app:cornerRadius="28dp"/>
+        <Button android:id="@+id/menuBtnBrowser" android:layout_width="56dp" android:layout_height="56dp" android:layout_margin="4dp" android:text="WEB" android:textSize="9sp" android:backgroundTint="#111115" android:textColor="#888888" android:padding="0dp" app:cornerRadius="28dp"/>
+    </LinearLayout>
+
+    <!-- ================= PLANCIA DI COMANDO HUB PRINCIPALE ================= -->
+    <LinearLayout
+        android:id="@+id/layoutHackHub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_above="@id/layoutBottomMenu"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <!-- Intestazione Titolo e Tasto Switch Tema -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+            <TextView
+                android:id="@+id/txtHubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HACKHUB"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#00E676"
+                android:letterSpacing="0.1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+            <Button
+                android:id="@+id/btnSwitchTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="THEME 🎨"
+                android:textSize="10sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1C1C24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:cornerRadius="12dp" />
+        </RelativeLayout>
+
+        <!-- ================= TAB 1: WIRELESS RADAR FORENSIC ================= -->
+        <LinearLayout
+            android:id="@+id/tabWirelessRadar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <Button
+                android:id="@+id/btnScanWifi"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="SCANSIONA SPAZIO AEREO"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1C1C24"
+                app:cornerRadius="14dp" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="14dp"
+                android:background="#0A0A0C"
+                android:padding="12dp">
+                <TextView
+                    android:id="@+id/txtWifiResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Avvia il modulo di intelligence wireless."
+                    android:textColor="#00E676"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.2" />
+            </ScrollView>
+        </LinearLayout>
+
+        <!-- ================= TAB 2: LAN SCANNER PURO ================= -->
+        <LinearLayout
+            android:id="@+id/tabLanScanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    android:id="@+id/txtIspProvider"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ISP: Rilevamento..."
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtLocalIpInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mio IP: 0.0.0.0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:gravity="end"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnScanLan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="SCAN SOTTORETE LOCALE"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1C1C24"
+                app:cornerRadius="14dp" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="14dp"
+                android:background="#0A0A0C"
+                android:padding="12dp">
+                <TextView
+                    android:id="@+id/txtLanResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Avvia la mappatura dei nodi IP connessi."
+                    android:textColor="#00E676"
+                    android:textSize="13sp" />
+            </ScrollView>
+        </LinearLayout>
+        <!-- ================= TAB 3: PORT AUDITOR INDIPENDENTE ================= -->
+        <LinearLayout
+            android:id="@+id/tabPortScannerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <EditText
+                    android:id="@+id/editTxtTargetIpScan"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="IP Target per Porte"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#44444C"
+                    android:backgroundTint="#1C1C24"
+                    android:paddingStart="12dp"
+                    android:textSize="13sp"
+                    android:inputType="text" />
+                <Button
+                    android:id="@+id/btnStartPortScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="SCAN 🚪"
+                    android:textSize="11sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#1C1C24"
+                    android:layout_marginStart="8dp"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="8dp">
+                <EditText
+                    android:id="@+id/editTxtPortStart"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:hint="Da porta"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#44444C"
+                    android:backgroundTint="#1C1C24"
+                    android:paddingStart="12dp"
+                    android:textSize="13sp"
+                    android:inputType="number" />
+                <EditText
+                    android:id="@+id/editTxtPortEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:hint="A porta"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#44444C"
+                    android:backgroundTint="#1C1C24"
+                    android:paddingStart="12dp"
+                    android:textSize="13sp"
+                    android:inputType="number"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginBottom="8dp">
+                <Button android:id="@+id/btnProfileWeb" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="WEB 🌐" android:textSize="10sp" android:textColor="#FFFFFF" android:backgroundTint="#1C1C24" android:layout_marginEnd="4dp" app:cornerRadius="8dp"/>
+                <Button android:id="@+id/btnProfileGaming" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="GAME 🎮" android:textSize="10sp" android:textColor="#FFFFFF" android:backgroundTint="#1C1C24" android:layout_marginEnd="4dp" app:cornerRadius="8dp"/>
+                <Button android:id="@+id/btnProfileComuni" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="CORE ⚡" android:textSize="10sp" android:textColor="#FFFFFF" android:backgroundTint="#1C1C24" app:cornerRadius="8dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <EditText
+                    android:id="@+id/editTxtPortTimeout"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:hint="Tempo limite di risposta in ms (default: 800)"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#44444C"
+                    android:backgroundTint="#1C1C24"
+                    android:paddingStart="12dp"
+                    android:textSize="13sp"
+                    android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <EditText
+                    android:id="@+id/editTxtMacTarget"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:hint="MAC per WakeOnLan"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#44444C"
+                    android:backgroundTint="#1C1C24"
+                    android:paddingStart="12dp"
+                    android:textSize="13sp" />
+                <Button
+                    android:id="@+id/btnSendWol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:text="WOL ⚡"
+                    android:textSize="11sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#1C1C24"
+                    android:layout_marginStart="8dp"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0A0A0C"
+                android:padding="12dp">
+                <TextView
+                    android:id="@+id/txtPortResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Inizializza l'analisi selettiva delle porte e del Banner Grabbing."
+                    android:textColor="#00E676"
+                    android:textSize="13sp" />
+            </ScrollView>
+        </LinearLayout>
+
+        <!-- ================= TAB 4: DNS LOOKUP & RECON ================= -->
+        <LinearLayout
+            android:id="@+id/tabDnsRecon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <EditText
+                    android:id="@+id/editTxtDnsTarget"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Inserisci dominio (es. google.com)"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#44444C"
+                    android:backgroundTint="#1C1C24"
+                    android:paddingStart="12dp"
+                    android:textSize="13sp"
+                    android:inputType="textUri" />
+                <Button
+                    android:id="@+id/btnStartDnsRecon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="RECON 🔍"
+                    android:textSize="11sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#1C1C24"
+                    android:layout_marginStart="8dp"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0A0A0C"
+                android:padding="12dp">
+                <TextView
+                    android:id="@+id/txtDnsResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mappa l'infrastruttura DNS e i sottodomini esterni."
+                    android:textColor="#00E676"
+                    android:textSize="13sp" />
+            </ScrollView>
+        </LinearLayout>
+        <!-- ================= TAB 5: CHROME BROWSER MULTI-ACCOUNT ================= -->
+        <LinearLayout
+            android:id="@+id/tabBrowser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#111115"
+                android:padding="4dp"
+                android:layout_marginBottom="4dp">
+                <Button android:id="@+id/btnHome" android:layout_width="wrap_content" android:layout_height="44dp" android:text="🏠" android:textColor="#FFFFFF" android:backgroundTint="#1C1C24" app:cornerRadius="8dp" />
+                <EditText android:id="@+id/editTxtUrl" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:hint="Cerca o digita un URL..." android:textColor="#FFFFFF" android:textColorHint="#44444C" android:backgroundTint="#1C1C24" android:paddingStart="10dp" android:textSize="13sp" android:inputType="textUri" android:imeOptions="actionGo" />
+                <Button android:id="@+id/btnRefresh" android:layout_width="wrap_content" android:layout_height="44dp" android:text="🔄" android:textColor="#FFFFFF" android:backgroundTint="#1C1C24" app:cornerRadius="8dp" />
+            </LinearLayout>
+            <ProgressBar android:id="@+id/webProgressBar" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:visibility="gone" android:max="100" />
+            <WebView android:id="@+id/webView" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
